@@ -72,6 +72,7 @@ Rails.application.routes.draw do
       edit_step :firm_details
       edit_step :reason_for_claim
       edit_step :case_details
+      edit_step :claim_reason
     end
   end
 end

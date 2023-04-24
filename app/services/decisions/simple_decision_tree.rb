@@ -8,6 +8,8 @@ module Decisions
         edit(:case_disposal)
       when :case_disposal
         after_case_disposal
+          when :firm_details
+          edit(:claim_reason)
       else
         index('/claims')
       end
@@ -21,7 +23,7 @@ module Decisions
       when :reason_for_claim
         edit(:case_details)
       else
-        index('/claims')
+        index(:claim_reason)
       end
     end
 
