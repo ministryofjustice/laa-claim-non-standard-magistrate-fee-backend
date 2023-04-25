@@ -16,8 +16,16 @@ en:
         other: Other Reason
       steps_case_details_form:
         main_offence_date: Main offence date
-        case_details: Case Details
-        Ufn: Case Details
+        assigned_counsel: Was there an assigned counsel ?
+        unassigned_counsel: Was there an unassigned counsel ?
+        agent_instructed: Was there an instructed agent ?
+        remitted_to_magistrate: Has the case been remitted from the Crown Court to the magistrates court ?
+      steps_case_disposal_form:
+        guilty_pleas: Category 1
+        not_guilty_pleas: Category 2
+        arrest_warrent_date: Date of Issue
+        cracked_trial_date: Date guilty pldea indicated to solicitor
+
 
     hint:
       steps_claim_type_form:
@@ -29,6 +37,9 @@ en:
       steps_case_details_form:
         main_offence_date: For example, 27 3 2007
         main_offence: Enter the name of an offence, or select one from the suggestions that appear when you start to enter the name
+      steps_case_disposal_form:
+        arrest_warrent_date: For example, 27 3 2007
+        cracked_trial_date: For example, 27 3 2007
 
     label:
       steps_claim_type_form:
@@ -44,26 +55,44 @@ en:
         address_line_2: Address line 2
         town: Town or city
         postcode: Postcode
+      steps_case_details_form:
+        ufn: Your Unique File Number
+        main_offence: Main offence
+        assigned_counsel: aaaaaaaaa
+        assigned_counsel_options:
+          'yes': 'Yes'
+          'no': 'No'
+        unassigned_counsel_options:
+          'yes': 'Yes'
+          'no': 'No'
+        agent_instructed_options:
+          'yes': 'Yes'
+          'no': 'No'
+        remitted_to_magistrate_options:
+          'yes': 'Yes'
+          'no': 'No'
+      steps_claim_reason_form:
+        claim_reason_options: aaa
       steps_firm_details_form[solicitor_attributes]:
         full_name: Solicitor full name
         reference_number: Solicitor reference number
-        contact_full_name: Contact full name
-        contact_email: Email address
-      steps_reason_for_claim_form:
-        reason_for_claim_options:
-          core_costs_exceed_higher_limit: Core costs exceed higher limit
-          enhanced_rates_claimed: Enhanced rates claimed
-          counsel_or_agent_assigned: Counsel or agent assigned
-          representation_order_withdrawn: Representation order withdrawn
-          extradition: Extradition
-          other: Other Reason
-      steps_case_details_form:
-        case_details: Case Details
-        ufn: Your unique file number
-        main_offence: Main offence
-        case_details_options:
-          assigned_council: assigned council
-
-
+        contact_full_name: Full name of alternative contact
+        contact_email: Email address of alternative contact
+        alternative_contact_details_options:
+          'yes': 'Yes'
+          'no': 'No'
+      steps_case_disposal_form:
+        plea_options:
+          guilty: Guilty plea
+          uncontested_breach: Uncontested breach
+          discontinuance: Discontinuance or withdrawal
+          bind_over: Bind over
+          change_solicitor: Change of solicitor
+          arrest_warrent: Warrent of arrest
+          not_guilty: Not guilty plea
+          cracked_trial: Cracked trial
+          contested: Contested breach
+          deferred_sentence: Discontinuance or withdrawal or bind over or no evidence offered after case fully prepared
+          mixed: Mixed plea
 
 

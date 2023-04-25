@@ -2,47 +2,38 @@ require 'steps/base_form_object'
 
 module Steps
   class CaseDetailsForm < Steps::BaseFormObject
-    #attribute :claim_type, :value_object, source: ClaimType
+    BOOLEAN_FIELDS = %i[assigned_counsel unassigned_counsel agent_instructed remitted_to_magistrate].freeze
 
-    attribute :offence_date_committed, :multiparam_date
     attribute :ufn, :string
     attribute :main_offence, :string
-    attribute :assigned_counsel, :boolean
-    attribute :agent_instructed, :boolean
-    attribute :remitted_to_magistrate, :boolean
+    attribute :main_offence_date, :multiparam_date
+    attribute :assigned_counsel, :string
+    attribute :unassigned_counsel, :string
+    attribute :agent_instructed, :string
+    attribute :remitted_to_magistrate, :string
 
-    CaseDetails.values.each do |case_details|
-      attribute case_details, :boolean
+    validates :ufn, presence: true
+    validates :main_offence, presence: true
+    validates :main_offence_date, presence: true,
+         multiparam_date: { allow_past: true, allow_future: false }
+    validates :assigned_counsel, presence: true
+    validates :unassigned_counsel, presence: true
+    validates :agent_instructed, presence: true
+    validates :remitted_to_magistrate, presence: true
+
+    BOOLEAN_FIELDS.each do |field|
+      attribute field, :value_object, source: YesNoAnswer
+      validates field, presence: true, inclusion: { in: YesNoAnswer.values }
     end
 
-    def choices
-      CaseDetails.values
+    def boolean_fields
+      self.class::BOOLEAN_FIELDS
     end
 
     private
 
     def persist!
-      application.update(
-        attributes.merge(attributes_to_reset)
-      )
-    end
-
-    def attributes_to_reset
-      {
-        'main_offence' => main_offence,
-        'offence_date_committed' => offence_date_committed,
-         'assigned_counsel' => assigned_counsel,
-          'agent_instructed' => agent_instructed,
-          'remitted_to_magistrate' => remitted_to_magistrate,
-      }
-    end
-
-    def status_attributes
-      if case_details == CaseDetails::SOMETHING_ELSE
-        { 'status' => :abandoned }
-      else
-        {}
-      end
+      application.update!(attributes)
     end
   end
 end

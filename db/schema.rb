@@ -10,9 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_10_130331) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_10_162831) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "claim_reasons", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "claims", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "ufn"
@@ -37,11 +42,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_10_130331) do
     t.text "reason_for_claim_other"
     t.text "reason_for_claim"
     t.text "main_offence"
-    t.date "offence_date_committed"
-    t.boolean "assigned_counsel"
-    t.boolean "unassigned_counsel"
-    t.boolean "agent_instructed"
-    t.boolean "remitted_to_magistrate"
+    t.date "main_offence_date"
+    t.string "assigned_counsel"
+    t.string "unassigned_counsel"
+    t.string "agent_instructed"
+    t.string "remitted_to_magistrate"
+    t.string "plea"
+    t.date "arrest_warrent_date"
+    t.date "cracked_trial_date"
     t.index ["firm_office_id"], name: "index_claims_on_firm_office_id"
     t.index ["solicitor_id"], name: "index_claims_on_solicitor_id"
     t.index ["ufn"], name: "index_claims_on_ufn"

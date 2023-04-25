@@ -41,8 +41,34 @@ RSpec.describe Decisions::SimpleDecisionTree do
       expect(decision_tree.destination).to eq(
         action: :edit,
         controller: :case_disposal,
+        action: :index,
+        controller: '/claims',
         id: application,
       )
+    # TODO: update this when implemented
+    it 'moves to reason for claim' do
+      claim = Steps::FirmDetailsForm.new(application:)
+      decision_tree = described_class.new(claim, as: :firm_details)
+      expect(decision_tree.destination).to eq(
+                                             action: :edit,
+                                             controller: :reason_for_claim,
+                                             id: application,
+                                           )
+    end
+  end
+
+  context 'when step is reason_for_claims' do
+    # TODO: update this when implemented
+    it 'moves to case_details' do
+      debugger
+      claim = Steps::ReasonForClaimForm.new(application:)
+      decision_tree = described_class.new(claim, as: :reason_for_claim)
+      debugger
+      expect(decision_tree.destination).to eq(
+                                             action: :edit,
+                                             controller: :case_details,
+                                             id: application,
+                                           )
     end
   end
 

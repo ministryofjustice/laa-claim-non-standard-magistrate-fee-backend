@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'User can fill in claim type details', type: :system do
+RSpec.describe 'User can fill in case details', type: :system do
   let(:claim) { Claim.create(office_code: 'AAAA') }
 
   before do
@@ -8,21 +8,31 @@ RSpec.describe 'User can fill in claim type details', type: :system do
   end
 
   it 'can do green path' do
-    visit edit_steps_claim_type_path(claim.id)
+    visit edit_steps_case_details_path(claim.id)
 
-    choose 'Non-standard magistrates fee'
+    fill_in 'Your Unique File Number', with: 'UFN123'
+    fill_in 'Main offence', with: 'Murder'
+    fill_in 'Day', with: '20'
+    fill_in 'Month', with: '4'
+    fill_in 'Year', with: '2023'
 
-    within '#steps-claim-type-form-claim-type-non-standard-magistrate-conditional' do
-      fill_in 'Day', with: '20'
-      fill_in 'Month', with: '4'
-      fill_in 'Year', with: '2023'
-    end
+    choose ('steps-case-details-form-assigned-counsel-yes-field')
+    choose ('steps-case-details-form-unassigned-counsel-no-field')
+    choose ('steps-case-details-form-agent-instructed-yes-field')
+    choose ('steps-case-details-form-remitted-to-magistrate-no-field')
 
     click_on 'Save and continue'
 
+    debugger
     expect(claim.reload).to have_attributes(
-      claim_type: 'non_standard_magistrate',
-      representation_order_withdrawn_date: Date.new(2023, 4, 20)
+      ufn: 'UFN123',
+      main_offence: 'Murder',
+      main_offence_date: Date.new(2023, 4, 20),
+      assigned_counsel: 'yes',
+      unassigned_counsel: 'no',
+      agent_instructed: 'yes',
+      remitted_to_magistrate: 'no'
     )
+    debugger
   end
 end

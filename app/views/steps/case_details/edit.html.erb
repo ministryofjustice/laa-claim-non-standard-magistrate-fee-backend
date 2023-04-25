@@ -9,31 +9,15 @@
       <%= f.govuk_text_field :ufn, width: 'one-third', autocomplete: 'off' %>
       <%= f.govuk_text_field :main_offence, width: 'one-third', autocomplete: 'off' %>
       <%= f.govuk_date_field :main_offence_date, maxlength_enabled: true %>
-      <%= f.govuk_radio_buttons_fieldset :assigned_counsel, legend: { text: "Was there an assigned Counsel", tag: 'h3', size: 'm' } do %>
-        <%= f.govuk_radio_button :assigned_counsel, CaseDetails::THERE_WAS_AN_ASSIGNED_COUNSEL.value,  legend: { text: "Yes"},  value: TrueClass  do %>
-        <% end %>
-        <%= f.govuk_radio_button :assigned_counsel, CaseDetails::THERE_WAS_AN_ASSIGNED_COUNSEL.value do %>
-        <% end %>
-      <% end %>
-      <%= f.govuk_radio_buttons_fieldset :unassigned_counsel, legend: { text: "Was there an unassigned Counsel", tag: 'h3', size: 'm' } do %>
-        <%= f.govuk_radio_button :unassigned_counsel, CaseDetails::THERE_WAS_AN_UNASSIGNED_COUNSEL.value, value: TrueClass do %>
-        <% end %>
-        <%= f.govuk_radio_button :unassigned_counsel, CaseDetails::THERE_WAS_AN_UNASSIGNED_COUNSEL.value do %>
-        <% end %>
-      <% end %>
-      <%= f.govuk_radio_buttons_fieldset :agent_instructed, legend: { text: "Was there an instructed agent", tag: 'h3', size: 'm' } do %>
-        <%= f.govuk_radio_button :agent_instructed, CaseDetails::THERE_WAS_AN_AGENT_INSTRUCTED.value,value: TrueClass  do %>
-        <% end %>
-        <%= f.govuk_radio_button :agent_instructed, CaseDetails::THERE_WAS_AN_AGENT_INSTRUCTED.value do %>
-        <% end %>
-      <% end %>
-      <%= f.govuk_radio_buttons_fieldset :remitted_to_magistrate, legend: { text: "Has the case been remitted from the Crown Court to the magistrates court", tag: 'h3', size: 'm' } do %>
-        <%= f.govuk_radio_button :remitted_to_magistrate, CaseDetails::REMITTED_TO_MAGISTRATE.value, value: TrueClass do %>
-        <% end %>
-        <%= f.govuk_radio_button :remitted_to_magistrate, CaseDetails::REMITTED_TO_MAGISTRATE.value do %>
-        <% end %>
-      <% end %>
-      <%= f.continue_button(secondary: false) %>
-      </div>
-      </div>
+
+      <% @form_object.boolean_fields.each do |field| %>
+        <%= f.govuk_radio_buttons_fieldset field, legend: { size: 'm' } do %>
+          <%= f.govuk_radio_button field, YesNoAnswer::YES.to_s %>
+          <%= f.govuk_radio_button field, YesNoAnswer::NO.to_s %>
+        <% end%>
+      <% end%>
+
+      <%= f.continue_button %>
     <% end %>
+  </div>
+</div>

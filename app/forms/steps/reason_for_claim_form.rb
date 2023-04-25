@@ -48,10 +48,8 @@ module Steps
         representation_order_withdrawn.nil? &&
         extradition.nil? &&
         other.nil?)
-        errors.add(:base, :invalid)
+        errors.add(attribute_name, :invalid)
         return true
-      else
-        return
       end
     end
 
