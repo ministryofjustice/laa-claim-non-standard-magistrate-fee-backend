@@ -15,7 +15,7 @@ module Decisions
       if form_object.claim_type.supported?
         edit(:firm_details)
       else
-        index(:claim_reason)
+        index(:claims)
       end
     end
   end
