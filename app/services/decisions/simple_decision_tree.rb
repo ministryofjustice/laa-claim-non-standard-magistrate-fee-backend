@@ -5,7 +5,7 @@ module Decisions
       when :claim_type
         after_claim_type
           when :firm_details
-          edit(:claim_reason)
+          edit(:reason_for_claim)
       else
         index('/claims')
       end
