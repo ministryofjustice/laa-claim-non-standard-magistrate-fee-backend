@@ -7,7 +7,7 @@ module Decisions
           when :firm_details
           edit(:reason_for_claim)
       else
-        index('/claims')
+        index("/claims")
       end
     end
 
