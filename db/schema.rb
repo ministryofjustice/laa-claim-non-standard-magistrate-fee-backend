@@ -25,9 +25,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_160346) do
     t.date "cntp_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.uuid "firm_office_id"
-    t.string "reason_for_claim"
-    t.string "provide_details"
     t.boolean "core_costs_exceed_higher_limit"
     t.boolean "enhanced_rates_claimed"
     t.boolean "councel_or_agent_assigned"
@@ -41,6 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_160346) do
     t.index ["solicitor_id"], name: "index_claims_on_solicitor_id"
     t.boolean "extradition"
     t.boolean "other"
+    t.text "reason_for_claim_other"
     t.index ["ufn"], name: "index_claims_on_ufn"
   end
 
