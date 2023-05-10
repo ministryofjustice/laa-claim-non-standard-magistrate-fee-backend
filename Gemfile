@@ -24,7 +24,6 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-expectations', '~>3.12.3'
   gem 'rspec-rails'
-  gem 'rswag'
 end
 
 group :development do
