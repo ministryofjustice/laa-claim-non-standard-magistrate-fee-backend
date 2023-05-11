@@ -42,18 +42,14 @@ module Steps
     end
 
     def validate_reasons
-      return false
-      #errors.add(:base, :invalid)
-       if (core_costs_exceed_higher_limit.nil? &&
+      # debugger
+      errors.add(:base, :invalid)
+       if not (core_costs_exceed_higher_limit.nil? &&
          enhanced_rates_claimed.nil? &&
         counsel_or_agent_assigned.nil? &&
         representation_order_withdrawn.nil? &&
         extradition.nil? &&
         other.nil?)
-          return false
-       else
-          errors.add(:base, :invalid)
-          return true
        end
     end
 

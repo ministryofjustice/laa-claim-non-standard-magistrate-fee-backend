@@ -45,7 +45,7 @@ en:
       models:
         steps/claim_type_form:
           attributes:
-            rep_order_date: *shared_date_errors
+            representation_order_withdrawn_date: *shared_date_errors
             cntp_order:
               blank: Enter a CNTP number
             cntp_date: *shared_date_errors

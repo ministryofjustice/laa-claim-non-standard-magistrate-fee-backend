@@ -40,6 +40,7 @@ RSpec.describe Decisions::SimpleDecisionTree do
       expect(decision_tree.destination).to eq(
         action: :index,
         controller: '/claims',
+        id: application,
       )
     end
   end

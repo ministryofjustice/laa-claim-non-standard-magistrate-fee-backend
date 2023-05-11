@@ -4,12 +4,12 @@ RSpec.describe Claim do
   subject { described_class.new(attributes) }
 
   describe '#date' do
-    context 'when rep_order_date is set' do
-      let(:attributes) { { rep_order_date: } }
-      let(:rep_order_date) { Date.yesterday }
+    context 'when representation_order_withdrawn_date is set' do
+      let(:attributes) { { representation_order_withdrawn_date: } }
+      let(:representation_order_withdrawn_date) { Date.yesterday }
 
-      it 'returns the rep_order_date' do
-        expect(subject.date).to eq(rep_order_date)
+      it 'returns the representation_order_withdrawn_date' do
+        expect(subject.date).to eq(representation_order_withdrawn_date)
       end
     end
 
@@ -22,7 +22,7 @@ RSpec.describe Claim do
       end
     end
 
-    context 'when neither rep_order_date or cntp_date is set' do
+    context 'when neither representation_order_withdrawn_date or cntp_date is set' do
       let(:attributes) { {} }
 
       it 'returns nil' do

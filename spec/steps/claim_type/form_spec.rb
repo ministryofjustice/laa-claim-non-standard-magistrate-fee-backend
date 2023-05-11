@@ -27,6 +27,7 @@ RSpec.describe Steps::ClaimTypeForm do
       let(:claim_type) { '' }
 
       it 'has is a validation error on the field' do
+        # debugger
         expect(form).not_to be_valid
         expect(form.errors.of_kind?(:claim_type, :inclusion)).to be(true)
       end

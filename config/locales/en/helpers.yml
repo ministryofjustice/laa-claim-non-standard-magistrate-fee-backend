@@ -8,8 +8,13 @@ en:
         cntp_date: CNTP date
       steps_reason_for_claim_form:
         reason_for_claim: Why are you claiming a non-standard magistrates fee ?
-        rep_order_date: Representation order date
+        representation_order_withdrawn_date: Representation order withdrawn date
+        reason_for_claim_options:
+          representation_order_withdrawn: Representation order withdrawn date
         cntp_date: CNTP date
+      steps_case_details_form:
+        case_details: Case Details
+        Ufn: Case Details
 
     hint:
       steps_claim_type_form:
@@ -30,9 +35,21 @@ en:
         reason_for_claim_options:
           core_costs_exceed_higher_limit: Core costs exceed higher limit
           enhanced_rates_claimed: Enhanced rates claimed
-          councel_or_agent_assigned: Councel or agent assigned
-          representation_order_withdrawn_on: Representation order withdrawn on
+          counsel_or_agent_assigned: Counsel or agent assigned
+          representation_order_withdrawn: Representation order withdrawn
           extradition: Extradition
           other: Other
+      steps_case_type_form:
+        case_details: Case Details
+        ufn: Your unique file number
+        main_offence: Main offence
+        main_offence_date: Main offence date
+        case_type: Case Type 
+        case_type_options:
+          assigned_council: assigned council
 
+
+    hint:
+      steps_case_type_form:
+        main_offence: Enter the name of an offence, or select one from the suggestions that appear when you start to enter the name
 

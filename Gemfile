@@ -22,7 +22,7 @@ group :development, :test do
   gem 'debug'
   gem 'dotenv-rails'
   gem 'pry'
-  gem 'rspec-expectations'
+  gem 'rspec-expectations', '~>3.12.3'
   gem 'rspec-rails'
   gem 'rswag'
 end

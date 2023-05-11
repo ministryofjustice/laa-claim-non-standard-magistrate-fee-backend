@@ -7,7 +7,7 @@ class Claim < ApplicationRecord
   end
 
   def date
-    rep_order_date || cntp_date
+    representation_order_withdrawn_date || cntp_date
   end
 
   def short_id

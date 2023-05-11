@@ -346,7 +346,7 @@ DEPENDENCIES
   pry
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
-  rspec-expectations
+  rspec-expectations (~> 3.12.3)
   rspec-rails
   rswag
   rubocop
@@ -364,7 +364,7 @@ DEPENDENCIES
   uk_postcode
 
 RUBY VERSION
-   ruby 3.2.1p31
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.8

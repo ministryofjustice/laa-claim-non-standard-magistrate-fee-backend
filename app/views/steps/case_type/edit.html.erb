@@ -1,0 +1,23 @@
+<% title t('.page_title') %>
+<% step_header(path: applications_path) %>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <%= govuk_error_summary(@form_object) %>
+    <h1 class="govuk-heading-xl">Case Details</h1>
+    <%= step_form @form_object do |f| %>
+      <%= f.govuk_text_field :ufn, width: 'one-third', autocomplete: 'off' %>
+      <%= f.govuk_text_field :main_offence, width: 'one-third', autocomplete: 'off' %>
+      <p class="govuk-body">Enter the name of an offence, or select one from the suggestions that appear when you start
+        to enter the name</p>
+      <%= f.govuk_date_field :main_offence_date, maxlength_enabled: true %>
+      <%= f.govuk_radio_buttons_fieldset :case_type, legend: { tag: 'h3', size: 'm' } do %>
+        <% @form_object.choices.each do |choice| %>
+          <%= f.govuk_check_box choice.value, true, multiple: false do %>
+          <% end %>
+          <% end %>
+        <% end %>
+        <%= f.continue_button(secondary: false) %>
+        </div>
+        </div>
+      <% end %>

@@ -7,9 +7,9 @@
     <%= step_form @form_object do |f| %>
         <%= f.govuk_check_boxes_fieldset :reason_for_claim, legend: { tag: 'h1', size: 'xl' } do %>
         <% @form_object.choices.each do |choice| %>
-            <% if choice == ReasonForClaim::REPRESENTATION_ORDER_WITHDRAWN %>
+            <% if choice.has_date_field? %>
               <%= f.govuk_check_box choice.value, true, multiple: false do %>
-                <%= f.govuk_date_field :rep_order_date_withdrawn, maxlength_enabled: true %>
+                <%= f.govuk_date_field choice.date_field_name, maxlength_enabled: true %>
               <% end %>
             <% elsif choice == ReasonForClaim::OTHER %>
               <%= f.govuk_check_box  choice.value, true, multiple: false do %>

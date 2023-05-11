@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_25_160346) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_05_123954) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,18 +27,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_160346) do
     t.datetime "updated_at", null: false
     t.boolean "core_costs_exceed_higher_limit"
     t.boolean "enhanced_rates_claimed"
-    t.boolean "councel_or_agent_assigned"
-    t.boolean "representation_order_withdrawn_on"
-    t.date "rep_order_date_withdrawn"
+    t.boolean "counsel_or_agent_assigned"
+    t.boolean "representation_order_withdrawn"
+    t.date "representation_order_withdrawn_date"
     t.boolean "extradition"
     t.boolean "other"
     t.text "reason_for_claim_other"
-    t.uuid "solicitor_id"
-    t.index ["firm_office_id"], name: "index_claims_on_firm_office_id"
-    t.index ["solicitor_id"], name: "index_claims_on_solicitor_id"
-    t.boolean "extradition"
-    t.boolean "other"
-    t.text "reason_for_claim_other"
+    t.text "main_offence"
+    t.date "offence_date_committed"
+    t.boolean "assigned_counsel"
+    t.boolean "no_assigned_counsel"
+    t.boolean "unassigned_counsel"
+    t.boolean "no_unassigned_counsel"
+    t.boolean "agent_instructed"
+    t.boolean "no_agent_instructed"
+    t.boolean "remitted_to_magistrate"
     t.index ["ufn"], name: "index_claims_on_ufn"
   end
 
