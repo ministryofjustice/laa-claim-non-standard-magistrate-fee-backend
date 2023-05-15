@@ -2,7 +2,7 @@ require 'steps/base_form_object'
 
 module Steps
   class ReasonForClaimForm < Steps::BaseFormObject
-    # attribute :reason_for_claim, :value_object, source: ReasonForClaim
+    attribute :reason_for_claim, :value_object, source: ReasonForClaim
     attribute :core_costs_exceed_higher_limit, :boolean
     attribute :enhanced_rates_claimed, :boolean
     attribute :counsel_or_agent_assigned, :boolean
@@ -42,19 +42,17 @@ module Steps
     end
 
     def validate_reasons
-      return false
-      #errors.add(:base, :invalid)
-       if (core_costs_exceed_higher_limit.nil? &&
-         enhanced_rates_claimed.nil? &&
+      if (core_costs_exceed_higher_limit.nil? &&
+        enhanced_rates_claimed.nil? &&
         counsel_or_agent_assigned.nil? &&
         representation_order_withdrawn.nil? &&
         extradition.nil? &&
         other.nil?)
-          return false
-       else
-          errors.add(:base, :invalid)
-          return true
-       end
+        errors.add(:base, :invalid)
+        return true
+      else
+        return
+      end
     end
 
     def persist!

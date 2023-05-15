@@ -1,7 +1,7 @@
 require 'steps/base_form_object'
 
 module Steps
-  class CaseTypeForm < Steps::BaseFormObject
+  class CaseDetailsForm < Steps::BaseFormObject
     #attribute :claim_type, :value_object, source: ClaimType
 
     attribute :offence_date_committed, :multiparam_date
@@ -12,12 +12,12 @@ module Steps
     attribute :agent_instructed, :boolean
     attribute :remitted_to_magistrate, :boolean
 
-    CaseType.values.each do |case_type|
-      attribute case_type, :boolean
+    CaseDetails.values.each do |case_details|
+      attribute case_details, :boolean
     end
 
     def choices
-      CaseType.values
+      CaseDetails.values
     end
 
     private

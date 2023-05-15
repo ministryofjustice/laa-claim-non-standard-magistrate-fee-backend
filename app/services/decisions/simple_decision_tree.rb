@@ -3,20 +3,15 @@ module Decisions
     def destination
       case step_name
       when :claim_type
-        after_claim_type
+        edit(:firm_details)
       when :firm_details
         edit(:reason_for_claim)
+      when :reason_for_claim
+        edit(:case_details)
       else
-        edit(:case_type)
-      end
-    end
-
-    def after_claim_type
-      if form_object.claim_type.supported?
-        edit(:firm_details)
-      else
-        index(:claims)
+        edit(:claims)
       end
     end
   end
 end
+

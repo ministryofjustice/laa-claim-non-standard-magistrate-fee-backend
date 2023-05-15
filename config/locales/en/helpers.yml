@@ -13,6 +13,7 @@ en:
           representation_order_withdrawn: Representation order withdrawn date
         cntp_date: CNTP date
       steps_case_details_form:
+        main_offence_date: Main offence date
         case_details: Case Details
         Ufn: Case Details
 
@@ -23,6 +24,9 @@ en:
         cntp_order: For example CNTP1234
       steps_firm_details_form[solicitor_attributes]:
         contact_email: For example, your_name@email.com
+      steps_case_details_form:
+          main_offence: Enter the name of an offence, or select one from the suggestions that appear when you start to enter the name
+
 
     label:
       steps_claim_type_form:
@@ -39,17 +43,13 @@ en:
           representation_order_withdrawn: Representation order withdrawn
           extradition: Extradition
           other: Other
-      steps_case_type_form:
+      steps_case_details_form:
         case_details: Case Details
         ufn: Your unique file number
         main_offence: Main offence
-        main_offence_date: Main offence date
-        case_type: Case Type 
-        case_type_options:
+        case_details_options:
           assigned_council: assigned council
 
 
-    hint:
-      steps_case_type_form:
-        main_offence: Enter the name of an offence, or select one from the suggestions that appear when you start to enter the name
+
 

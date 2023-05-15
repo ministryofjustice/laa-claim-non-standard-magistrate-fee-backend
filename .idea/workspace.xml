@@ -5,27 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4031468a-023f-4ab0-a007-a6772b0ae26a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/LAA-Claim-non-standard-magistrate-fee-backend2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LAA-Claim-non-standard-magistrate-fee-backend2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ruby-version" beforeDir="false" afterPath="$PROJECT_DIR$/.ruby-version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/steps/case_type_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms/steps/case_type_form.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/forms/steps/reason_for_claim_form.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/steps/reason_for_claim_form.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/claim.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/claim.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/value_objects/reason_for_claim.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/value_objects/reason_for_claim.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/steps/reason_for_claim/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/steps/reason_for_claim/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/locales/en/errors.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/en/errors.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/value_objects/case_type.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/steps/case_type/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/steps/firm_details/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/steps/firm_details/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/locales/en/helpers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/en/helpers.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20230425160346_add_column_reason_for_claim.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230425160346_add_column_reason_for_claim.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230505123954_case_type.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/decisions/simple_decision_tree_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/decisions/simple_decision_tree_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/claim_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/claim_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/reason_for_change_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/steps/claim_type/form_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/steps/claim_type/form_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/steps/claim_type/integration_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/steps/claim_type/integration_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gems/laa_multi_step_forms/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/gems/laa_multi_step_forms/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/steps/reason_for_claim/form_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/steps/reason_for_claim/form_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +61,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
     &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;debugger.stepping&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -423,6 +418,8 @@
       <workItem from="1683649471049" duration="23383000" />
       <workItem from="1683733428244" duration="415000" />
       <workItem from="1683733907227" duration="8704000" />
+      <workItem from="1683884051302" duration="17370000" />
+      <workItem from="1684130561287" duration="3284000" />
     </task>
     <servers />
   </component>
@@ -581,14 +578,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb</url>
-          <line>9</line>
-          <properties myBlockOrdinal="-1">
-            <option name="block-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="104" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb</url>
           <line>4</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
@@ -604,7 +593,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/spec/steps/reason_for_claim/form_spec.rb</url>
-          <line>33</line>
+          <line>34</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -612,7 +601,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/forms/steps/reason_for_claim_form.rb</url>
-          <line>58</line>
+          <line>56</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -620,7 +609,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/forms/steps/reason_for_claim_form.rb</url>
-          <line>46</line>
+          <line>44</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -628,19 +617,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/forms/steps/reason_for_claim_form.rb</url>
-          <line>52</line>
+          <line>51</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="110" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/forms/steps/reason_for_claim_form.rb</url>
-          <line>54</line>
-          <properties myBlockOrdinal="-1">
-            <option name="block-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/views/steps/case_type/edit.html.erb</url>
@@ -660,14 +641,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/forms/steps/reason_for_claim_form.rb</url>
-          <line>15</line>
-          <properties myBlockOrdinal="-1">
-            <option name="block-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="114" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/forms/steps/reason_for_claim_form.rb</url>
           <line>5</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
@@ -683,12 +656,76 @@
           <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/forms/steps/case_type_form.rb</url>
+          <url>file://$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb</url>
+          <line>2</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb</url>
+          <line>5</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb</url>
           <line>6</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
-          <option name="timeStamp" value="117" />
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb</url>
+          <line>7</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb</url>
+          <line>8</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb</url>
+          <line>9</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/forms/steps/reason_for_claim_form.rb</url>
+          <line>58</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/gems/laa_multi_step_forms/app/controllers/steps/base_step_controller.rb</url>
+          <line>39</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/forms/steps/reason_for_claim_form.rb</url>
+          <line>53</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="142" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -708,7 +745,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend@Decisions__SimpleDecisionTree.rcov" NAME="Decisions::SimpleDecisionTree Coverage Results" MODIFIED="1683017525495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend" />
     <SUITE FILE_PATH="coverage/LAA_Claim_non_standard_magistrate_fee_backend@LAA_Claim_non_standard_magistrate_fee_backend.rcov" NAME="LAA-Claim-non-standard-magistrate-fee-backend Coverage Results" MODIFIED="1681909880574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend" />
-    <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend2@LAA_Claim_non_standard_magistrate_fee_backend2.rcov" NAME="LAA-Claim-non-standard-magistrate-fee-backend2 Coverage Results" MODIFIED="1683797394525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend2" />
+    <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend2@LAA_Claim_non_standard_magistrate_fee_backend2.rcov" NAME="LAA-Claim-non-standard-magistrate-fee-backend2 Coverage Results" MODIFIED="1684133944715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend2" />
+    <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend2@LAA_Claim_non_standard_magistrate_fee_backend.rcov" NAME="LAA-Claim-non-standard-magistrate-fee-backend Coverage Results" MODIFIED="1683798940405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend2" />
     <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend2@spec__LAA_Claim_non_standard_magistrate_fee_backend2.rcov" NAME="spec: LAA-Claim-non-standard-magistrate-fee-backend2 Coverage Results" MODIFIED="1683648328801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend2" />
     <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend@LAA_Claim_non_standard_magistrate_fee_backend.rcov" NAME="LAA-Claim-non-standard-magistrate-fee-backend Coverage Results" MODIFIED="1682684515988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend" />
     <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend@ClaimsController.rcov" NAME="ClaimsController Coverage Results" MODIFIED="1682689892452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend" />

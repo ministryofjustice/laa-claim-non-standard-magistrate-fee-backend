@@ -73,7 +73,7 @@ Rails.application.routes.draw do
       show_step :start_page
       edit_step :firm_details
       edit_step :reason_for_claim
-      edit_step :case_type
+      edit_step :case_details
     end
   end
 end

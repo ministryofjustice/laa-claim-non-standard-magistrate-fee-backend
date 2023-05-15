@@ -1,4 +1,4 @@
-class CaseType < ValueObject
+class CaseDetails < ValueObject
   VALUES = [
     THERE_WAS_AN_ASSIGNED_COUNSEL = new(:assigned_counsel),
     THERE_WAS_NO_ASSIGNED_COUNSEL = new(:no_assigned_counsel),

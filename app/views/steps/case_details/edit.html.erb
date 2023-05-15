@@ -11,7 +11,7 @@
       <p class="govuk-body">Enter the name of an offence, or select one from the suggestions that appear when you start
         to enter the name</p>
       <%= f.govuk_date_field :main_offence_date, maxlength_enabled: true %>
-      <%= f.govuk_radio_buttons_fieldset :case_type, legend: { tag: 'h3', size: 'm' } do %>
+      <%= f.govuk_radio_buttons_fieldset :case_details, legend: { tag: 'h3', size: 'm' } do %>
         <% @form_object.choices.each do |choice| %>
           <%= f.govuk_check_box choice.value, true, multiple: false do %>
           <% end %>

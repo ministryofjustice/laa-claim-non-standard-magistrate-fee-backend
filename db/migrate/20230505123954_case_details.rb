@@ -1,4 +1,4 @@
-class CaseType < ActiveRecord::Migration[7.0]
+class CaseDetails < ActiveRecord::Migration[7.0]
   def change
     add_column :claims, :main_offence, :text
     add_column :claims, :offence_date_committed, :date

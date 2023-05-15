@@ -8,5 +8,6 @@ class AddColumnReasonForClaim < ActiveRecord::Migration[7.0]
     add_column :claims, :extradition, :bool
     add_column :claims, :other, :bool
     add_column :claims, :reason_for_claim_other, :text
+    add_column :claims, :reason_for_claim, :text
   end
 end
