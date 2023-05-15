@@ -8,10 +8,12 @@ en:
         cntp_date: CNTP date
       steps_reason_for_claim_form:
         reason_for_claim: Why are you claiming a non-standard magistrates fee ?
-        representation_order_withdrawn_date: Representation order withdrawn date
-        reason_for_claim_options:
-          representation_order_withdrawn: Representation order withdrawn date
-        cntp_date: CNTP date
+        core_costs_exceed_higher_limit: Core costs exceed higher limit
+        enhanced_rates_claimed: Enhanced rates claimed
+        counsel_or_agent_assigned: Counsel or agent assigned
+        representation_order_withdrawn: Representation order withdrawn
+        extradition: Extradition
+        other: Other Reason
       steps_case_details_form:
         main_offence_date: Main offence date
         case_details: Case Details
@@ -25,8 +27,8 @@ en:
       steps_firm_details_form[solicitor_attributes]:
         contact_email: For example, your_name@email.com
       steps_case_details_form:
-          main_offence: Enter the name of an offence, or select one from the suggestions that appear when you start to enter the name
-
+        main_offence_date: For example, 27 3 2007
+        main_offence: Enter the name of an offence, or select one from the suggestions that appear when you start to enter the name
 
     label:
       steps_claim_type_form:
@@ -35,6 +37,18 @@ en:
           breach_of_injunction: Breach of injunction
           something_else: Something else
         cntp_order: CNTP number
+      steps_firm_details_form[firm_office_attributes]:
+        name: Firm name
+        account_number: Firm account number
+        address_line_1: Address line 1
+        address_line_2: Address line 2
+        town: Town or city
+        postcode: Postcode
+      steps_firm_details_form[solicitor_attributes]:
+        full_name: Solicitor full name
+        reference_number: Solicitor reference number
+        contact_full_name: Contact full name
+        contact_email: Email address
       steps_reason_for_claim_form:
         reason_for_claim_options:
           core_costs_exceed_higher_limit: Core costs exceed higher limit
@@ -42,7 +56,7 @@ en:
           counsel_or_agent_assigned: Counsel or agent assigned
           representation_order_withdrawn: Representation order withdrawn
           extradition: Extradition
-          other: Other
+          other: Other Reason
       steps_case_details_form:
         case_details: Case Details
         ufn: Your unique file number

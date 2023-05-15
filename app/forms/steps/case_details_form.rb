@@ -39,7 +39,7 @@ module Steps
     end
 
     def status_attributes
-      if claim_type == ClaimType::SOMETHING_ELSE
+      if case_details == CaseDetails::SOMETHING_ELSE
         { 'status' => :abandoned }
       else
         {}

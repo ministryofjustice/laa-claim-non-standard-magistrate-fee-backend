@@ -32,7 +32,7 @@ RSpec.describe Steps::ReasonForClaimForm do
       it 'has a validation error' do
         debugger
         expect(form).not_to be_valid
-        # expect(form.errors.of_kind?(:base, :invalid)).to be(true)
+        expect(form.errors.of_kind?(:base, :invalid)).to be(true)
       end
     end
 
@@ -43,7 +43,7 @@ RSpec.describe Steps::ReasonForClaimForm do
     let(:counsel_or_agent_assigned) { nil }
     let(:representation_order_withdrawn) { nil }
     let(:extradition) { nil }
-    let(:other) { true }
+    let(:other) { nil }
 
     describe '#save' do
       context 'when one choice is selected' do
