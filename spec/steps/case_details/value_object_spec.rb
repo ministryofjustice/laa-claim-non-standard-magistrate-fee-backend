@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ReasonForClaim do
+RSpec.describe CaseDetails do
   subject { described_class.new(value) }
 
   let(:value) { :foo }
@@ -9,12 +9,10 @@ RSpec.describe ReasonForClaim do
     it 'returns all possible values' do
       expect(described_class.values.map(&:to_s)).to eq(
         %w[
-          core_costs_exceed_higher_limit
-          enhanced_rates_claimed
-          counsel_or_agent_assigned
-          representation_order_withdrawn
-          extradition
-          other
+          assigned_counsel
+          unassigned_counsel
+          agent_instructed
+          remitted_to_magistrate
         ]
       )
     end

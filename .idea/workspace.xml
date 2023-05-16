@@ -7,12 +7,12 @@
     <list default="true" id="4031468a-023f-4ab0-a007-a6772b0ae26a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/forms/steps/case_details_form.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/steps/case_details_form.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/value_objects/case_details.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/value_objects/case_details.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/decisions/simple_decision_tree.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/steps/case_details/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/steps/case_details/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/steps/reason_for_claim/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/steps/reason_for_claim/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/locales/en/helpers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/en/helpers.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230505123954_case_details.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230505123954_case_details.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/decisions/simple_decision_tree_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/decisions/simple_decision_tree_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/steps/reason_for_claim/form_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/steps/reason_for_claim/form_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/steps/reason_for_claim/value_object_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/steps/reason_for_claim/value_object_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,7 +411,7 @@
       <workItem from="1683733428244" duration="415000" />
       <workItem from="1683733907227" duration="8704000" />
       <workItem from="1683884051302" duration="17370000" />
-      <workItem from="1684130561287" duration="15193000" />
+      <workItem from="1684130561287" duration="29185000" />
     </task>
     <servers />
   </component>
@@ -554,7 +554,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/spec/decisions/simple_decision_tree_spec.rb</url>
-          <line>39</line>
+          <line>40</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -562,7 +562,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/spec/steps/reason_for_claim/form_spec.rb</url>
-          <line>29</line>
+          <line>31</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -585,7 +585,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/spec/steps/reason_for_claim/form_spec.rb</url>
-          <line>34</line>
+          <line>42</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -737,7 +737,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend@Decisions__SimpleDecisionTree.rcov" NAME="Decisions::SimpleDecisionTree Coverage Results" MODIFIED="1683017525495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend" />
     <SUITE FILE_PATH="coverage/LAA_Claim_non_standard_magistrate_fee_backend@LAA_Claim_non_standard_magistrate_fee_backend.rcov" NAME="LAA-Claim-non-standard-magistrate-fee-backend Coverage Results" MODIFIED="1681909880574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend" />
-    <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend2@LAA_Claim_non_standard_magistrate_fee_backend2.rcov" NAME="LAA-Claim-non-standard-magistrate-fee-backend2 Coverage Results" MODIFIED="1684160543868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend2" />
+    <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend2@LAA_Claim_non_standard_magistrate_fee_backend2.rcov" NAME="LAA-Claim-non-standard-magistrate-fee-backend2 Coverage Results" MODIFIED="1684218271334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend2" />
     <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend2@LAA_Claim_non_standard_magistrate_fee_backend.rcov" NAME="LAA-Claim-non-standard-magistrate-fee-backend Coverage Results" MODIFIED="1683798940405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend2" />
     <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend2@spec__LAA_Claim_non_standard_magistrate_fee_backend2.rcov" NAME="spec: LAA-Claim-non-standard-magistrate-fee-backend2 Coverage Results" MODIFIED="1683648328801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend2" />
     <SUITE FILE_PATH="coverage/laa_claim_non_standard_magistrate_fee_backend@LAA_Claim_non_standard_magistrate_fee_backend.rcov" NAME="LAA-Claim-non-standard-magistrate-fee-backend Coverage Results" MODIFIED="1682684515988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LAA-Claim-non-standard-magistrate-fee-backend" />

@@ -8,7 +8,6 @@ module Steps
     attribute :ufn, :string
     attribute :main_offence, :string
     attribute :assigned_counsel, :boolean
-    attribute :no_assigned_counsel, :boolean
     attribute :agent_instructed, :boolean
     attribute :remitted_to_magistrate, :boolean
 

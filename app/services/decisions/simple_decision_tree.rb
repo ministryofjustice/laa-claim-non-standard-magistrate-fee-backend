@@ -9,7 +9,7 @@ module Decisions
       when :reason_for_claim
         edit(:case_details)
       else
-        edit(:claims)
+        index('/claims')
       end
     end
   end
