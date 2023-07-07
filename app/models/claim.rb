@@ -6,6 +6,8 @@ class Claim < ApplicationRecord
   has_many :disbursements, lambda {
                              order(:disbursement_date, :disbursement_type, :id)
                            }, dependent: :destroy, inverse_of: :claim
+  has_many :evidence_upload, -> { order(:upload_date) }, dependent: :destroy, inverse_of: :claim
+  has_many_attached :evidence
 
   def date
     rep_order_date || cntp_date

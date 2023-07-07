@@ -10,10 +10,11 @@ module Decisions
       claim_details: :work_item,
       work_item: :work_items,
       disbursement_cost: :disbursements,
+      other_info: :evidence_upload
     }.freeze
 
     SHOW_MAPPING = {
-      other_info: :start_page,
+      evidence_upload: :start_page,
     }.freeze
 
     def destination
